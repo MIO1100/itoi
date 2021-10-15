@@ -1,11 +1,11 @@
 #include <QApplication>
 #include <QPushButton>
 #include <QLabel>
-#include "lab/Lab1.h"
-#include "filter/FilterUtil.h"
+#include "common/Filter.h"
+#include "test/Lab2.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    Lab1::work();
+    Lab2::test();
     return 0;
 }

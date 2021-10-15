@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.19)
 project(itoi)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -6,22 +6,26 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(QT_VERSION 6)
+set(QT_VERSION 5)
 set(REQUIRED_LIBS Core Gui Widgets)
-set(REQUIRED_LIBS_QUALIFIED Qt6::Core Qt6::Gui Qt6::Widgets)
+set(REQUIRED_LIBS_QUALIFIED Qt5::Core Qt5::Gui Qt5::Widgets)
 
 add_executable(${PROJECT_NAME}
         main.cpp
-        core/InputImage.cpp core/InputImage.h
-        core/DoubleImage.cpp core/DoubleImage.h
-        core/helper.h core/helper.cpp
-        filter/FilterUtil.cpp filter/FilterUtil.h
-        filter/Kernels.cpp filter/Kernels.h
-        filter/border/IBorder.cpp filter/border/IBorder.h
-        filter/border/Mirror.cpp filter/border/Mirror.h
-        filter/border/Zero.cpp filter/border/Zero.h
-        filter/border/Copy.cpp filter/border/Copy.h
-        lab/Lab1.cpp lab/Lab1.h filter/border/Policies.cpp filter/border/Policies.h)
+        common/LoadedImg.cpp common/LoadedImg.h
+        common/ProcessingImg.cpp common/ProcessingImg.h
+        common/Filter.cpp common/Filter.h
+        common/Kernels.cpp common/Kernels.h
+        common/border/IBorderPolicy.cpp common/border/IBorderPolicy.h
+        common/border/MirrorPolicy.cpp common/border/MirrorPolicy.h
+        common/border/ZeroPolicy.cpp common/border/ZeroPolicy.h
+        common/border/SymmetryPolicy.cpp
+        common/border/SymmetryPolicy.h
+        common/border/CopyPolicy.cpp common/border/CopyPolicy.h
+        test/Lab2.cpp test/Lab2.h
+        octave/OctaveFactory.cpp octave/OctaveFactory.h
+        octave/Element.cpp octave/Element.h
+        octave/Octave.cpp octave/Octave.h)
 
 set(CMAKE_PREFIX_PATH "C:\\Qt\\6.2.0\\mingw81_64\\")
 
