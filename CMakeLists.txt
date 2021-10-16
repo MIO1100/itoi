@@ -40,9 +40,11 @@ add_executable(${PROJECT_NAME}
         descriptor/DescriptorPair.cpp descriptor/DescriptorPair.h
         test/Lab4.cpp test/Lab4.cpp
         descriptor/Histogram.cpp descriptor/Histogram.h
+        descriptor/Sift.cpp descriptor/Sift.h
         descriptor/Basket.cpp descriptor/Basket.h
         descriptor/HistogramFactory.cpp descriptor/HistogramFactory.h
-common/AbstractImg.cpp common/AbstractImg.h descriptor/AbstractDescriptorFactory.cpp descriptor/AbstractDescriptorFactory.h)
+        test/Lab5.cpp test/Lab5.h
+        descriptor/SiftFactory.cpp descriptor/SiftFactory.h common/AbstractImg.cpp common/AbstractImg.h descriptor/AbstractDescriptorFactory.cpp descriptor/AbstractDescriptorFactory.h)
 
 set(CMAKE_PREFIX_PATH "C:\\Qt\\6.2.0\\mingw81_64\\")
 
@@ -50,6 +52,7 @@ set(CMAKE_PREFIX_PATH "C:\\Qt\\6.2.0\\mingw81_64\\")
 if (NOT CMAKE_PREFIX_PATH)
     message(WARNING "CMAKE_PREFIX_PATH is not defined, you may need to set it ")
 endif ()
+
 
 find_package(Qt${QT_VERSION} COMPONENTS ${REQUIRED_LIBS} REQUIRED)
 target_link_libraries(${PROJECT_NAME} ${REQUIRED_LIBS_QUALIFIED})
