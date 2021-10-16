@@ -65,10 +65,6 @@ public:
         {
             Lab2(5, 2, 1, 0.5, 7.13, "cat", ".jpg")
                     .work();
-            Lab2(3, 2, 1.5, 0.8, 4, "mimimi", ".jpg")
-                    .work();
-            Lab2(3, 4, 0.7, 0.3, 3, "wall", ".jpg")
-                    .work();
         }
 //        b
         {
