@@ -6,7 +6,6 @@
 #include "../common/LoadedImg.h"
 #include "../point/Moravec.h"
 #include "../point/Harris.h"
-#include "../descriptor/DescriptorDrawer.h"
 
 
 class Lab3 {
@@ -50,10 +49,6 @@ public:
 
         cout << "Start test for Lab3..." << endl;
 
-        Lab3("wall", ".jpg").moravec()->harris();
-
-
-        Lab3("mimimi", ".jpg").moravec()->harris();
 
         Lab3("cat_dog_brighted", ".jpg").moravec()->harris();
 
@@ -64,17 +59,7 @@ public:
 //        Lab3("cat_dog_mirror", ".jpg").moravec()->harris();
 
 
-//
-        Lab3("lenna", ".png").moravec()->harris();
 
-        Lab3("lenna_brighted", ".png").moravec()->harris();
-
-//        Lab3("lenna_rotated", ".png").moravec()->harris();
-//
-//        Lab3("lenna_noised", ".png").moravec()->harris();
-
-        Lab3("lenna_mirror", ".png").moravec()->harris();
-    }
 };
 
 

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.19)
+cmake_minimum_required(VERSION 3.21)
 project(itoi)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -6,9 +6,9 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(QT_VERSION 5)
+set(QT_VERSION 6)
 set(REQUIRED_LIBS Core Gui Widgets)
-set(REQUIRED_LIBS_QUALIFIED Qt5::Core Qt5::Gui Qt5::Widgets)
+set(REQUIRED_LIBS_QUALIFIED Qt6::Core Qt6::Gui Qt6::Widgets)
 
 add_executable(${PROJECT_NAME}
         main.cpp
@@ -22,7 +22,6 @@ add_executable(${PROJECT_NAME}
         common/border/SymmetryPolicy.cpp
         common/border/SymmetryPolicy.h
         common/border/CopyPolicy.cpp common/border/CopyPolicy.h
-        test/Lab2.cpp test/Lab2.h
         octave/OctaveFactory.cpp octave/OctaveFactory.h
         octave/Element.cpp octave/Element.h
         octave/Octave.cpp octave/Octave.h
@@ -30,11 +29,8 @@ add_executable(${PROJECT_NAME}
         point/AbstractInterestPointsAlgo.cpp point/AbstractInterestPointsAlgo.h
         point/Moravec.cpp point/Moravec.h
         point/Harris.cpp point/Harris.h
-        distortions/Rotate.cpp distortions/Rotate.h
         test/Lab3.cpp test/Lab3.h
 
-        descriptor/Sift.cpp descriptor/Sift.h
-        descriptor/Basket.cpp descriptor/Basket.h
  common/AbstractImg.cpp common/AbstractImg.h)
 set(CMAKE_PREFIX_PATH "C:\\Qt\\6.2.0\\mingw81_64\\")
 
