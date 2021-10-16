@@ -6,6 +6,7 @@
 #include "../common/LoadedImg.h"
 #include "../point/Moravec.h"
 #include "../point/Harris.h"
+#include "../point/Drawer.h"
 
 
 class Lab3 {
@@ -28,7 +29,7 @@ private:
         auto moravec = new Moravec(make_shared<ProcessingImg>(inputDouble), imageName, ext);
         auto points = moravec->find_points(pointsCount, windowSize, moravecThresholdCoef);
         auto result = LoadedImg::from_processing_img(inputDouble).native_image();
-        LoadedImg::save(DescriptorDrawer::mark_points(points, result),
+        LoadedImg::save(Drawer::mark_points(points, result),
                         imageName + "_moravec_" + QString::fromStdString(to_string(pointsCount)) + ext);
         return this;
     }
@@ -39,7 +40,7 @@ private:
         auto harris = new Harris(make_shared<ProcessingImg>(inputDouble), imageName, ext);
         auto points = harris->find_points(pointsCount, 3, harrisThresholdCoef);
         auto result = LoadedImg::from_processing_img(inputDouble).native_image();
-        LoadedImg::save(DescriptorDrawer::mark_points(points, result),
+        LoadedImg::save(Drawer::mark_points(points, result),
                         imageName + "_harris_" + QString::fromStdString(to_string(pointsCount)) + ext);
         return this;
     }
@@ -50,16 +51,9 @@ public:
         cout << "Start test for Lab3..." << endl;
 
 
-        Lab3("cat_dog_brighted", ".jpg").moravec()->harris();
+        Lab3("mimimi", ".jpg").moravec()->harris();
 
-//        Lab3("cat_dog_rotated", ".jpg").moravec()->harris();
-//
-//        Lab3("cat_dog_noised", ".png").moravec()->harris();
-//
-//        Lab3("cat_dog_mirror", ".jpg").moravec()->harris();
-
-
-
+    }
 };
 
 
