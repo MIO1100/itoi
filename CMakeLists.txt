@@ -25,8 +25,17 @@ add_executable(${PROJECT_NAME}
         test/Lab2.cpp test/Lab2.h
         octave/OctaveFactory.cpp octave/OctaveFactory.h
         octave/Element.cpp octave/Element.h
-        octave/Octave.cpp octave/Octave.h)
+        octave/Octave.cpp octave/Octave.h
+        point/Point.cpp point/Point.h
+        point/AbstractInterestPointsAlgo.cpp point/AbstractInterestPointsAlgo.h
+        point/Moravec.cpp point/Moravec.h
+        point/Harris.cpp point/Harris.h
+        distortions/Rotate.cpp distortions/Rotate.h
+        test/Lab3.cpp test/Lab3.h
 
+        descriptor/Sift.cpp descriptor/Sift.h
+        descriptor/Basket.cpp descriptor/Basket.h
+ common/AbstractImg.cpp common/AbstractImg.h)
 set(CMAKE_PREFIX_PATH "C:\\Qt\\6.2.0\\mingw81_64\\")
 
 if (NOT CMAKE_PREFIX_PATH)

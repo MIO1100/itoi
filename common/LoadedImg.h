@@ -20,7 +20,7 @@ private:
 
     inline static const QString RESOURCES = "../resources";
     inline static const QString INPUT = "/input/";
-    inline static const QString OUTPUT = "/output/lab2/";
+    inline static const QString OUTPUT = "/output/lab5/";
     QImage img;
     unique_ptr<unsigned char[]> data;
     QString name;
